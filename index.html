@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike-Inspired Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #a3d5ff; /* Light blue background */
+            color: #ffffff;
+            overflow-x: hidden;
+            animation: zoomOutScreen 1.5s ease-in-out;
+        }
+
+        @keyframes zoomOutScreen {
+            from {
+                transform: scale(1.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: background 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
+
+        nav:hover {
+            transform: scale(1.02);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: color 0.3s, transform 0.3s;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: #ff3c00;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero img {
+            width: 300px;
+            opacity: 0;
+            transform: translateY(-50px) scale(1.2);
+            animation: fadeInZoom 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeInZoom {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(1.2);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .shop-now {
+            padding: 15px 30px;
+            background: #ff3c00;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .shop-now:hover {
+            transform: scale(1.2);
+            background: #e62e00;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #000;
+            border-radius: 10px;
+            margin: 50px;
+        }
+
+        .about-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .shoes-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .shoe {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .shoe:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .shoe img {
+            width: 200px;
+            transition: transform 0.3s;
+        }
+
+        .shoe img:hover {
+            transform: scale(1.1);
+        }
+
+        .shoe h3 {
+            font-size: 22px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .shoe p {
+            font-size: 18px;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .shoe button {
+            padding: 10px 20px;
+            background: #ff3c00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .shoe button:hover {
+            background: #e62e00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">NIKE</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#shoes">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <img src="OIP (3).jpeg" alt="Nike Shoe Animation">
+        <button class="shop-now">Shop Now</button>
+    </section>
+    <section id="shoes" class="shoes-container">
+        <div class="shoe">
+            <img src="OIP.jpeg" alt="Nike Shoe 1">
+            <h3>Nike Air Max</h3>
+            <p>₹10,499</p>
+            <button><a href="buy.html"></a>Buy Now</button>
+            
+        </div>
+        <div class="shoe">
+            <img src="OIP (1).jpeg" alt="Nike Shoe 2">
+            <h3>Nike Free Run</h3>
+            <p>₹8,199</p>
+            <button><a href="buy.html">Buy Now</a></button>
+        </div>
+        <div class="shoe">
+            <img src="OIP (2).jpeg" alt="Nike Shoe 3">
+            <h3>Nike React Infinity</h3>
+            <p>₹9,599</p>
+            <button><a href="buy.html"></a>Buy Now</button>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h2>About Our Store</h2>
+        <p>Welcome to our Nike-inspired store. We provide the best quality sportswear, designed for comfort, performance, and style. Our collection includes a wide range of premium shoes, perfect for running, training, and casual wear.</p>
+    </section>
+</body>
+</html>

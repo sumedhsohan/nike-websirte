@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - Nike</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #a3d5ff;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .shoe-img {
+            width: 300px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .buy-options {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .button {
+            background: #ff3c00;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background: #e62e00;
+            transform: scale(1.1);
+        }
+
+        .info-reviews {
+            margin-top: 40px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info-reviews h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buy Your Nike Shoes</h1>
+        <img class="shoe-img" src="OIP (2).jpeg" alt="Nike Shoe">
+        <p>Experience the best in comfort and style with Nike shoes.</p>
+        
+        <div class="buy-options">
+            <label for="size">Select Size:</label>
+            <select id="size">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+            </select>
+            <button class="button">Add to Cart</button>
+            <button class="button">Buy Now</button>
+        </div>
+
+        <div class="info-reviews">
+            <h2>Product Information</h2>
+            <p>The Nike Air Uptempo is designed for ultimate comfort and style. Featuring premium materials, enhanced cushioning, and a bold design, it's perfect for both sports and casual wear.</p>
+            
+            <h2>Reviews</h2>
+            <p>⭐⭐⭐⭐⭐ - "Amazing comfort and perfect fit!" - John D.</p>
+            <p>⭐⭐⭐⭐ - "Great for running, stylish too!" - Sarah W.</p>
+            <p>⭐⭐⭐⭐⭐ - "Best shoes I've ever owned." - Mike T.</p>
+        </div>
+    </div>
+</body>
+</html>
